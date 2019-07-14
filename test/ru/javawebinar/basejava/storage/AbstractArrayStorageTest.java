@@ -53,7 +53,7 @@ public abstract class AbstractArrayStorageTest {
     public void update() throws Exception {
         Resume testResume = new Resume(UUID_1);
         storage.update(testResume);
-        assertSame(storage.get(UUID_1), testResume);
+        assertSame(testResume, storage.get(UUID_1));
     }
 
     @Test(expected = NotExistStorageException.class)
